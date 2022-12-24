@@ -10,6 +10,15 @@
     height: 100%;
 }
 
+.playerWrap{
+    position: fixed;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 4rem;
+}
 .nav{
     /* background-color: rgba(22, 2, 56, 0.5); */
     /* filter: blur(8px); */
@@ -23,6 +32,7 @@
     width: 100%;
     height: 4rem;
 }
+
 
 .modaltp{
     background-color: rgba(22, 2, 56, 0.0);

@@ -12,6 +12,10 @@ import TesModal from './TesModal';
 
 export default function Headers() {
   return (
+    <>
+      <div className={style.playerWrap}>
+          <Player/>
+      </div>
     <div className={style.nav}>
       
       <ModalFamily
@@ -25,18 +29,7 @@ export default function Headers() {
         Bcolor={'#21656d'}
       />
       <TesModal/>
-      <Player/>
-      {/* <div className={style.leftlogo}>
-      <h1>JZodiathes</h1>
       </div>
-      <div className={style.right}>
-      <ul>
-          <li><a href='/profile'>Home</a></li>
-          <li><a href=''>About</a></li>
-          <li><a href=''>Project</a></li>
-      </ul>
-      </div> */}
-      <audio/>
-    </div>
+      </>
   )
 }
