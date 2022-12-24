@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@100;400&family=Kaushan+Script&family=Open+Sans&family=Permanent+Marker&family=Poppins&display=swap');
+$font-header: 'Permanent Marker', cursive;
+$color-green: #00ffaa;
+$color-background: #111;
+$color-text: #555;
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+
+
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.4em 0;
+}
+
+input[type=checkbox] + label:before {
+  background: $color-text;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+  width: 16px;
+}
+
+input[type=checkbox]:checked + label:before {
+  background: $color-green;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  position: relative;
+}
+
+.container--offset {
+  margin-left: 0;
+}
+
+button {
+  background: $color-text;
+  border: 10px solid $color-green;
+  cursor: pointer;
+  display: block;
+  font-family: monospace;
+  font-size: 24px;
+  height: 80px;
+  line-height: 60px;
+  margin: 0;
+  outline: none;
+  padding: 0 1.2em;
+  text-align: right;
+
+  &:hover {
+    background: $color-green;
+  }
+
+  &#deleteme {
+    margin: 2rem;
+  }
+}
+
+.scene {
+  margin: 0;
+  padding: 0;
+
+  button {
+    left: 10%;
+    top: 260px;
+    width: 80%;
+    position: absolute;
+  }
+
+  .layer {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  
+}
+
+.fill {
+  bottom: 5%;
+  left: 5%;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.expand-width {
+  width: 100%;
+}
+
+.border {
+  border: 2px dashed $color-green;
+}
+
+.aspect {
+  opacity: 0.2;
+}
+
+@for $i from 1 through 6 {
+  .scene > *:nth-child(#{$i}) {
+    opacity: #{0.15 * $i};
+
+    button {
+      transform: rotate(#{180 - 30 * $i}deg)
+    }
+  }
+}
+
+#par{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imlay{
+  width: 120vw;
+  height: 100vh;
+  position: relative; 
+  // display: block; 
+  // left: -100px; 
+  top: -20px; 
+  transform: translate3d(0px, 0px, 0px); 
+  transform-style: preserve-3d; 
+  backface-visibility: hidden;
+}
+.imlay2{
+  width: 100%;
+  height: 70vh;
+  position: relative; 
+  display: block; 
+  top: 50px; 
+  left: 500px;
+  transform: translate3d(0px, 0px, 0px); 
+  transform-style: preserve-3d; 
+  backface-visibility: hidden;
+}
+.imlay3{
+  height: 400px;
+  width: 350px;
+  position: relative; 
+  display: block; 
+  top: 100px;
+  right: -700px; 
+  transform: translate3d(0px, 0px, 0px); 
+  transform-style: preserve-3d; 
+  backface-visibility: hidden;
+}
+.headerText{
+  color: #FFE15D;
+  font-family: $font-header;
+  font-size: 60px;
+  position: relative; 
+  display: block; 
+  top: 0px;
+  right: -700px; 
+  transform: translate3d(0px, 0px, 0px); 
+  transform-style: preserve-3d; 
+  backface-visibility: hidden;
+}
+
+
+@media #{$media-tablet} {
+  .imlay2{
+    height: 60vh;
+    top: 0px; 
+    left: 150px;
+  }
+
+  .imlay{
+    width: 160vw;
+  }
+  .headerText{
+    top: 100px; 
+    left: 450px;
+    font-size: 40px;
+  }
+}
+
+@media #{$media-mobile-sm} {
+  .imlay2{
+    height: 60vh;
+    top: 100px; 
+    left: 0px;
+  }
+
+  .imlay{
+    width: 160vw;
+  }
+
+  .headerText{
+    top: 100px; 
+    left: 150px;
+    font-size: 40px;
+  }
+}

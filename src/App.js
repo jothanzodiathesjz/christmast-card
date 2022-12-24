@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/main.scss'
+// import { useCallback } from "react";
+// import Particles from "react-particles";
+// import { loadFull } from "https://cdn.jsdelivr.net/npm/tsparticles/+esm"
+// import Hero from './components/Hero';
+// import Headers from './components/Headers';
+// import { Config } from './components/Config';
+
+import ModalFamily from './components/ModalFamily';
+import Paralax from './components/Paralax';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Paralax />
+    </>
+      
   );
 }
 
