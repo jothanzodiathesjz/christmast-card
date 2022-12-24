@@ -5,7 +5,7 @@ const Player = () => {
 
   return (
     <>
-      <audio src={Natal} autoPlay loop/>
+      <audio src={Natal} autoPlay loop controls style={{display:'none'}}/>
     </>
   );
 };
