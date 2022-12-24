@@ -1,11 +1,23 @@
 import React from "react";
+import { useEffect } from "react";
 import Natal from '../assets/musik/natal.mp3';
 
 const Player = () => {
 
+    useEffect(() => {
+        const song = document.getElementById("song");
+        song.play()
+    },[])
+
   return (
     <>
-      <audio src={Natal} autoPlay loop controls/>
+          <audio
+              id="song"
+              src={Natal}
+              loop
+              controls
+              style={{display:'none'}}
+          />
     </>
   );
 };
