@@ -13,9 +13,6 @@ import TesModal from './TesModal';
 export default function Headers() {
   return (
     <>
-      <div className={style.playerWrap}>
-          <Player/>
-      </div>
     <div className={style.nav}>
       
       <ModalFamily
@@ -28,7 +25,8 @@ export default function Headers() {
         Icon={StarOutlinedIcon}
         Bcolor={'#21656d'}
       />
-      <TesModal/>
+        <TesModal />
+        <Player/>
       </div>
       </>
   )
